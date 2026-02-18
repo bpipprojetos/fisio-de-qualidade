@@ -34,9 +34,8 @@ Estou iniciando um novo projeto de Landing Pages. Preciso que você configure a 
    - Force `loading="lazy"` e tags `alt` descritivas em todas as imagens.
 
 6. **Build e Verificação de Deploy:**
-   - No `package.json`, garanta que o script de `build` gere a saída em uma pasta previsível (ex: `dist/public`).
-   - Se for usar Vercel, oriente sobre a configuração do "Output Directory" como `dist/public`.
-   - Verifique a ordem dos `@import` no CSS (Google Fonts antes do Tailwind).
-   - Execute `npm run build` localmente para garantir que tudo compile sem avisos.
+   - No `package.json`, garanta que o script de `build` gere a saída na pasta padrão `dist`.
+   - Certifique-se de que o `.gitignore` exclua a pasta `dist` para que o Vercel construa o projeto de forma limpa.
+   - Execute um build de teste localmente.
 
 ---

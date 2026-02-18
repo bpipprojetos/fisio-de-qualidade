@@ -37,7 +37,7 @@ Estou iniciando um novo projeto de Landing Pages. Neste projeto, a raiz do domí
    - Corrija a ordem dos `@import` no CSS (Fontes antes do Tailwind).
 
 6. **Build e Deploy:**
-   - No `package.json`, garanta que o build gere a saída em `dist/public`.
+   - No `package.json`, garanta que o build gere a saída na pasta padrão `dist`.
    - Certifique-se de que o `.gitignore` exclua a pasta `dist` para que o Vercel construa o projeto de forma limpa.
    - Execute um build de teste localmente.
 

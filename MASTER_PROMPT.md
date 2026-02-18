@@ -32,6 +32,7 @@ Preciso que você realize os seguintes passos de padronização e publicação:
 
 5. **Validação Final:**
    - Execute `npm run build` localmente.
-   - **IMPORTANTE:** No Vercel, o "Output Directory" deve estar configurado como `dist/public`. Me confirme se a compilação gerou os arquivos corretamente nesta pasta.
+   - Verifique se a compilação gerou os arquivos corretamente na pasta `dist`.
+   - Certifique-se de que o Vercel esteja configurado para ler esta pasta.
 
 ---
