@@ -28,7 +28,7 @@ Preciso que você realize os seguintes passos de padronização e publicação:
 4. **Conformidade Google Ads & Vercel:**
    - Verifique se não há scripts de telemetria ou debug espalhados.
    - Garanta que o projeto tenha o arquivo `.npmrc` com `legacy-peer-deps=true`.
-   - Verifique o arquivo `vercel.json` para garantir o redirecionamento SPA.
+   - Garanta o `vercel.json` na raiz com o rewrite para SPA: `{"rewrites": [{"source": "/(.*)", "destination": "/index.html"}]}`.
 
 5. **Validação Final:**
    - Execute `npm run build` localmente.

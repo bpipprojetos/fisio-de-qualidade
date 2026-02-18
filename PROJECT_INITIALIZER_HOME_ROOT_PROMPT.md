@@ -13,8 +13,9 @@ Estou iniciando um novo projeto de Landing Pages. Neste projeto, a raiz do domí
 **Siga estas fases de preparação:**
 
 1. **Configuração de Ambiente e Vercel Fix:**
-   - Crie um arquivo `.npmrc` na raiz com `legacy-peer-deps=true` para evitar erros de pacotes no Vercel/Vite 7.
-   - Configure o `vercel.json` para suportar roteamento SPA e URLs limpas.
+   - Crie um arquivo `.npmrc` na raiz com `legacy-peer-deps=true` para evitar erros de pacotes.
+   - Crie um `vercel.json` na raiz com o rewrite para SPA: `{"rewrites": [{"source": "/(.*)", "destination": "/index.html"}]}`.
+   - Garanta que a página inicial (`/`) renderize o componente principal (ex: `Home.tsx`).
 
 2. **Roteamento Híbrido:**
    - Configure o roteamento principal (ex: `App.tsx`) para que a página inicial (`/`) renderize o componente `Home.tsx`.

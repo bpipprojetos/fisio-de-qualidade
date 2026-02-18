@@ -12,9 +12,10 @@ Estou iniciando um novo projeto de Landing Pages. Preciso que você configure a 
 
 **Siga estas fases de preparação:**
 
-1. **Configuração de Ambiente e Dependências (Vercel Fix):**
-   - Crie um arquivo `.npmrc` na raiz com a linha `legacy-peer-deps=true` para evitar erros de resolução de pacotes (ERESOLVE) no Vercel/Vite 7.
-   - Configure o `vercel.json` para tratar o projeto como um SPA, redirecionando todas as rotas para `index.html` e definindo os cabeçalhos de cache corretos.
+1. **Configuração de Ambiente e Vercel Fix:**
+   - Crie um arquivo `.npmrc` na raiz com `legacy-peer-deps=true` para evitar erros de pacotes.
+   - Crie um `vercel.json` na raiz com o rewrite para SPA: `{"rewrites": [{"source": "/(.*)", "destination": "/index.html"}]}`.
+   - Garanta que a página inicial (`/`) aponte para o componente `NotFound` no roteamento do React.
 
 2. **Roteamento e 'Silent Root' (Hiding Root):**
    - Configure o roteamento (ex: `App.tsx`) para que a página inicial (`/`) renderize um componente 404 personalizado em Português.
