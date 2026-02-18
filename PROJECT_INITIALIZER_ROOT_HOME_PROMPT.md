@@ -1,38 +1,42 @@
-# 🚀 Prompt de Inicialização: Domínio com Home na Raiz (Public Mode)
+# 🚀 Prompt de Inicialização: Projeto Multi-LP (Conformidade Google Ads & Silent Root)
 
-Use este prompt para projetos onde o `dominio.com` deve exibir uma página principal, mas o sistema deve estar pronto para várias outras LPs com slugs.
+Use este prompt para iniciar novos projetos exportados. Foco em performance, segurança e conformidade rigorosa para o Google Ads.
 
 ---
 
 **PROMPT:**
 
-Estou iniciando um novo projeto multi-LPs exportado do Exportador. Neste projeto, quero que a raiz do domínio (`/`) seja a página principal.
+Estou iniciando um novo projeto de Landing Pages. Preciso que você configure a infraestrutura base seguindo rigorosos padrões de conformidade para Google Ads e performance.
 
 **Tecnologia:** React + Vite + Tailwind CSS.
 
 **Siga estas fases de preparação:**
 
-1. **Roteamento Híbrido:**
-   - Configure o roteamento para que a página inicial (`/`) renderize o componente principal (ex: `Home.tsx`).
-   - Crie a pasta `client/src/pages/lps/` para organizar as landing pages adicionais que virão com slugs (ex: `/promo-novembro`).
-   - Mantenha um componente 404 funcional para rotas não existentes, mas este **pode** conter um botão de "Voltar para o Início".
+1. **Configuração de Ambiente e Dependências (Vercel Fix):**
+   - Crie um arquivo `.npmrc` na raiz com a linha `legacy-peer-deps=true` para evitar erros de resolução de pacotes (ERESOLVE) no Vercel/Vite 7.
+   - Configure o `vercel.json` para tratar o projeto como um SPA, redirecionando todas as rotas para `index.html` e definindo os cabeçalhos de cache corretos.
 
-2. **Páginas Legais e Navegação:**
-   - Crie/Refatore as páginas `/politica-privacidade` e `/termos-uso`.
-   - Garanta que todos os botões e imagens da Home e das LPs apontem para os slugs corretos, evitando links quebrados.
+2. **Roteamento e 'Silent Root' (Hiding Root):**
+   - Configure o roteamento (ex: `App.tsx`) para que a página inicial (`/`) renderize um componente 404 personalizado em Português.
+   - O 404 **NÃO deve conter botões de navegação**, servindo apenas para proteger o domínio raiz em auditorias automáticas do Google Ads.
+   - Organize as Landing Pages na pasta `client/src/pages/lps/` e configure os slugs específicos (ex: `/promo-especial`).
 
-3. **Automação de Mídia (Exportador ➡️ Local):**
-   - Scaneie o código em busca de URLs `files.cdn-externo.com`.
-   - Baixe as imagens para `client/public/assets/images/` e atualize os nomes no código para referências locais.
-   - Force `loading="lazy"` e tags `alt` descritivas em todas as imagens para garantir performance (LCP) e SEO.
+3. **Páginas Legais e Rodapé:**
+   - Crie as rotas `/politica-privacidade` e `/termos-uso` com textos profissionais e atualizados.
+   - Garanta que o rodapé contenha as informações obrigatórias: CNPJ/CPF, endereço físico (conforme Google Maps) e ano atual dinâmico.
 
-4. **Conformidade Google Ads e Analytics:**
-   - Limpe o `index.html` de scripts placeholders (Umami, etc).
-   - Prepare a injeção do GTM (Google Tag Manager) no `<head>` e logo após o `<body>`.
+4. **Limpeza de Telemetria e Scripts (Critical):**
+   - Remova do `index.html` e `vite.config.ts` qualquer rastro de telemetria, debug collectors ou scripts de monitoramento (ex: Manus, Umami, etc).
+   - Prepare o espaço para a instalação limpa do GTM (Google Tag Manager).
 
-5. **Padrão de Código e Build:**
-   - Corrija a ordem dos `@import` no CSS (Fontes antes do Tailwind).
-   - Execute `npm run build` para garantir que a arquitetura modular não gerou erros de importação.
-   - Refatore o `App.tsx` para usar imports limpos e organizados.
+5. **Localização de Mídia:**
+   - Scaneie o código em busca de URLs externas de CDNs (ex: `manuscdn`). Baixe-as para `client/public/assets/images/` e aponte para os caminhos locais.
+   - Force `loading="lazy"` e tags `alt` descritivas em todas as imagens.
+
+6. **Build e Verificação de Deploy:**
+   - No `package.json`, garanta que o script de `build` gere a saída em uma pasta previsível (ex: `dist/public`).
+   - Se for usar Vercel, oriente sobre a configuração do "Output Directory" como `dist/public`.
+   - Verifique a ordem dos `@import` no CSS (Google Fonts antes do Tailwind).
+   - Execute `npm run build` localmente para garantir que tudo compile sem avisos.
 
 ---
