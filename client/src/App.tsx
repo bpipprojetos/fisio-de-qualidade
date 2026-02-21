@@ -7,12 +7,14 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import DorCronicaLP from "./pages/lps/dor-cronica";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
+import OndasDeChoqueJoaoPessoa from "./pages/lps/ondasdechoque-joaopessoa";
 
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={NotFound} />
       <Route path={"/dorcronica-cambe-arapongas"} component={DorCronicaLP} />
+      <Route path={"/ondasdechoque-joaopessoa"} component={OndasDeChoqueJoaoPessoa} />
       <Route path={"/politica-privacidade"} component={PrivacyPolicy} />
       <Route path={"/termos-uso"} component={TermsOfUse} />
       <Route path={"/404"} component={NotFound} />

@@ -1,0 +1,5 @@
+.theme-trata {
+  --primary: #dc2626; /* Tailwind Red 600 - To match the previous brand color */
+  --primary-foreground: #ffffff;
+  --ring: #dc2626;
+}

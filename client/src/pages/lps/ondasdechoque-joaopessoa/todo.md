@@ -1,0 +1,5 @@
+- [x] Gerar nova imagem para a seção 'O Problema' com características locais
+- [x] Mover a nova imagem para a pasta pública
+- [x] Atualizar o componente ProblemSolution.tsx para usar a nova imagem
+- [x] Verificar a exibição correta da nova imagem na landing page
+- [ ] Atualizar todos os botões de agendamento com a nova URL do Typebot: https://typebot.co/bpip-angelica-toc
