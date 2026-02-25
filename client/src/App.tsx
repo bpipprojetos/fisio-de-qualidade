@@ -9,6 +9,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
 import OndasDeChoqueJoaoPessoa from "./pages/lps/ondasdechoque-joaopessoa";
 import OndasDeChoqueSaoLourenco from "./pages/lps/ondasdechoque-saolourenco";
+import QuedaIdososValinhos from "./pages/lps/quedaidosos-valinhos";
 
 function Router() {
   return (
@@ -17,6 +18,7 @@ function Router() {
       <Route path={"/dorcronica-cambe-arapongas"} component={DorCronicaLP} />
       <Route path={"/ondasdechoque-joaopessoa"} component={OndasDeChoqueJoaoPessoa} />
       <Route path={"/ondasdechoque-saolourenco"} component={OndasDeChoqueSaoLourenco} />
+      <Route path={"/quedaidosos-valinhos"} component={QuedaIdososValinhos} />
       <Route path={"/politica-privacidade"} component={PrivacyPolicy} />
       <Route path={"/termos-uso"} component={TermsOfUse} />
       <Route path={"/404"} component={NotFound} />

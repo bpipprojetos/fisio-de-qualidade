@@ -1,0 +1,18 @@
+- [x] Atualizar link do Typebot para https://typebot.co/bpip-fernando-valinhos-queda-idosos
+- [x] Remover botão "Agendar Avaliação" do cabeçalho
+- [x] Revisar carregamento de todas as imagens
+- [x] Gerar nova imagem hero: Senhor de 68 anos, morador de Valinhos, autêntico, não olhando para a câmera
+- [x] Gerar imagem card 1 (Atendimento): Fisioterapeuta atendendo idoso, foco nas mãos/cuidado, sem olhar para câmera
+- [x] Gerar imagem card 2 (Alívio): Idoso sentindo alívio/conforto, expressão serena, sem olhar para câmera
+- [x] Gerar imagem card 3 (Prevenção): Idoso fazendo exercício de equilíbrio, focado, sem olhar para câmera
+- [x] Extrair frame do vídeo testimonial1.mp4 para thumbnail
+- [x] Extrair frame do vídeo testimonial2.mp4 para thumbnail
+- [x] Atualizar Home.tsx com as novas imagens e thumbnails
+- [x] Alterar nome "Dona Maria" para "Sra. Catarina" no vídeo de depoimento
+- [x] Remover logo do rodapé
+- [x] Incluir horário de sábado (07h às 12h) no rodapé
+- [x] Criar página de Política de Privacidade
+- [x] Adicionar link de Política de Privacidade no rodapé
+- [x] Configurar todos os links do Typebot para abrir em nova aba (target="_blank")
+- [x] Remover links quebrados ou vazios do rodapé
+- [x] Otimizar imagens para CDN (já feito via manus-upload-file, mas verificar referências)
