@@ -16,7 +16,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#14463e] border-b border-[#1f5c52] shadow-md">
+    <header className="w-full bg-[#14463e] border-b border-[#1f5c52] shadow-md relative">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/">
           <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6 cursor-pointer">
@@ -25,7 +25,7 @@ export default function Header() {
               <span className="font-bold text-xl leading-none text-white tracking-tight border-r border-white/20 pr-6">
                 ITC Vertebral
               </span>
-              
+
               <span className="font-bold text-xl leading-none text-white tracking-tight">
                 Instituto TRATA
               </span>
@@ -76,7 +76,7 @@ export default function Header() {
                 Clínica em São Lourenço
               </span>
             </div>
-            
+
             {navItems.map((item) => (
               <a
                 key={item.name}
@@ -87,7 +87,7 @@ export default function Header() {
                 {item.name}
               </a>
             ))}
-            <Button 
+            <Button
               className="w-full bg-white text-[#14463e] rounded-full mt-2 font-bold uppercase"
               onClick={() => {
                 window.open("https://typebot.co/bpip-ludmila-toc", "_blank", "noopener,noreferrer");

@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <div className="theme-quedaidosos min-h-screen flex flex-col font-sans text-slate-800 bg-slate-50">
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm">
+      <header className="w-full border-b bg-white shadow-sm">
         <div className="container flex h-24 items-center justify-between">
           <div className="flex items-center gap-2">
             <img
