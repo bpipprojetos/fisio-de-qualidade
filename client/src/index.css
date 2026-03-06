@@ -41,61 +41,83 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  /* ITC Brand Colors */
+  --color-itc-red: oklch(0.55 0.22 25);
+  --color-itc-gold: oklch(0.80 0.15 85);
+  --color-itc-green: oklch(0.45 0.15 155);
 }
 
 :root {
   /* Dark Tech Healing Palette - Light Mode (Fallback, but main is Dark) */
-  --primary: oklch(0.65 0.18 150); /* Emerald 500 */
+  --primary: oklch(0.65 0.18 150);
+  /* Emerald 500 */
   --primary-foreground: oklch(0.98 0 0);
   --sidebar-primary: oklch(0.65 0.18 150);
   --sidebar-primary-foreground: oklch(0.98 0 0);
-  --chart-1: oklch(0.65 0.18 150); /* Emerald */
-  --chart-2: oklch(0.70 0.15 200); /* Cyan */
-  --chart-3: oklch(0.60 0.15 250); /* Blue */
-  --chart-4: oklch(0.70 0.18 40); /* Orange */
-  --chart-5: oklch(0.50 0.10 300); /* Purple */
+  --chart-1: oklch(0.65 0.18 150);
+  /* Emerald */
+  --chart-2: oklch(0.70 0.15 200);
+  /* Cyan */
+  --chart-3: oklch(0.60 0.15 250);
+  /* Blue */
+  --chart-4: oklch(0.70 0.18 40);
+  /* Orange */
+  --chart-5: oklch(0.50 0.10 300);
+  /* Purple */
   --radius: 0.5rem;
-  
+
   /* Force Dark Mode Colors as Default since user requested Dark LP */
-  --background: oklch(0.13 0.02 260); /* Slate 950 - Deep Dark Blue/Grey */
-  --foreground: oklch(0.95 0.01 260); /* Slate 50 */
-  --card: oklch(0.16 0.02 260); /* Slate 900 */
+  --background: oklch(0.13 0.02 260);
+  /* Slate 950 - Deep Dark Blue/Grey */
+  --foreground: oklch(0.95 0.01 260);
+  /* Slate 50 */
+  --card: oklch(0.16 0.02 260);
+  /* Slate 900 */
   --card-foreground: oklch(0.95 0.01 260);
   --popover: oklch(0.16 0.02 260);
   --popover-foreground: oklch(0.95 0.01 260);
-  --secondary: oklch(0.20 0.03 260); /* Slate 800 */
+  --secondary: oklch(0.20 0.03 260);
+  /* Slate 800 */
   --secondary-foreground: oklch(0.95 0.01 260);
   --muted: oklch(0.20 0.03 260);
-  --muted-foreground: oklch(0.65 0.05 260); /* Slate 400 */
+  --muted-foreground: oklch(0.65 0.05 260);
+  /* Slate 400 */
   --accent: oklch(0.20 0.03 260);
   --accent-foreground: oklch(0.95 0.01 260);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.25 0.03 260); /* Slate 700 */
+  --border: oklch(0.25 0.03 260);
+  /* Slate 700 */
   --input: oklch(0.25 0.03 260);
-  --ring: oklch(0.65 0.18 150); /* Emerald 500 */
+  --ring: oklch(0.65 0.18 150);
+  /* Emerald 500 */
   --sidebar: oklch(0.13 0.02 260);
   --sidebar-foreground: oklch(0.95 0.01 260);
   --sidebar-accent: oklch(0.20 0.03 260);
   --sidebar-accent-foreground: oklch(0.95 0.01 260);
   --sidebar-border: oklch(0.25 0.03 260);
   --sidebar-ring: oklch(0.65 0.18 150);
-  
+
   font-family: 'Inter', sans-serif;
 }
 
 .dark {
-  --primary: oklch(0.65 0.18 150); /* Emerald 500 */
+  --primary: oklch(0.65 0.18 150);
+  /* Emerald 500 */
   --primary-foreground: oklch(0.98 0 0);
   --sidebar-primary: oklch(0.65 0.18 150);
   --sidebar-primary-foreground: oklch(0.98 0 0);
-  --background: oklch(0.13 0.02 260); /* Slate 950 */
+  --background: oklch(0.13 0.02 260);
+  /* Slate 950 */
   --foreground: oklch(0.95 0.01 260);
-  --card: oklch(0.16 0.02 260); /* Slate 900 */
+  --card: oklch(0.16 0.02 260);
+  /* Slate 900 */
   --card-foreground: oklch(0.95 0.01 260);
   --popover: oklch(0.16 0.02 260);
   --popover-foreground: oklch(0.95 0.01 260);
-  --secondary: oklch(0.20 0.03 260); /* Slate 800 */
+  --secondary: oklch(0.20 0.03 260);
+  /* Slate 800 */
   --secondary-foreground: oklch(0.95 0.01 260);
   --muted: oklch(0.20 0.03 260);
   --muted-foreground: oklch(0.65 0.05 260);
@@ -119,7 +141,12 @@
   --sidebar-ring: oklch(0.65 0.18 150);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Outfit', sans-serif;
 }
 
@@ -127,9 +154,11 @@ h1, h2, h3, h4, h5, h6 {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
   [type="button"]:not(:disabled),
@@ -144,6 +173,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @layer components {
+
   /**
    * Custom container utility that centers content and adds responsive padding.
    *
@@ -161,7 +191,8 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
+    padding-left: 1rem;
+    /* 16px - mobile padding */
     padding-right: 1rem;
   }
 
@@ -172,16 +203,19 @@ h1, h2, h3, h4, h5, h6 {
 
   @media (min-width: 640px) {
     .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-left: 1.5rem;
+      /* 24px - tablet padding */
       padding-right: 1.5rem;
     }
   }
 
   @media (min-width: 1024px) {
     .container {
-      padding-left: 2rem; /* 32px - desktop padding */
+      padding-left: 2rem;
+      /* 32px - desktop padding */
       padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
+      max-width: 1280px;
+      /* Standard content width */
     }
   }
 }
