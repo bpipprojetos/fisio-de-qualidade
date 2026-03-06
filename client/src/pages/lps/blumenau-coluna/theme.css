@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+.theme-blumenau {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 20%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 20%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 20%;
+
+  --primary: 0 72% 49%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 43 96% 56%;
+  --secondary-foreground: 0 0% 15%;
+
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 45%;
+
+  --accent: 0 0% 96%;
+  --accent-foreground: 0 0% 20%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 0 0% 90%;
+  --input: 0 0% 90%;
+  --ring: 0 72% 49%;
+
+  --radius: 0.5rem;
+
+  --itc-red: 0 72% 49%;
+  --itc-dark: 0 0% 20%;
+  --itc-gold: 43 96% 56%;
+  --itc-green: 145 63% 32%;
+  --itc-gray-light: 0 0% 96%;
+  --itc-gray: 0 0% 60%;
+
+  font-family: 'Roboto', sans-serif;
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--background));
+}
+
+.theme-blumenau h1,
+.theme-blumenau h2,
+.theme-blumenau h3,
+.theme-blumenau h4,
+.theme-blumenau h5,
+.theme-blumenau h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* WhatsApp floating button animation */
+@keyframes whatsapp-pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.theme-blumenau .whatsapp-float {
+  animation: whatsapp-pulse 2s ease-in-out infinite;
+}
+
+/* Smooth scrolling - restricted to the container if possible, but usually global */
+.theme-blumenau {
+  scroll-behavior: smooth;
+}
