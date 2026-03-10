@@ -44,7 +44,7 @@ export default function Home() {
             <img src="/assets/images/logo-instituto.png" alt="ITC Vertebral + Instituto Trata" className="h-12 object-contain" />
             <div className="h-8 w-px bg-gray-300 hidden sm:block"></div>
             <span className="text-sm font-medium text-gray-600 hidden sm:block leading-tight">
-              Fisioterapia<br />Especializada
+              Fisioterapia de<br />Qualidade
             </span>
           </div>
           <Button
@@ -77,13 +77,13 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
               </span>
-              Cambé e Arapongas
+              Fisioterapia de Qualidade
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white">
-              Dor Crônica <br />
+              Fisioterapia de <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-400">
-                Que Não Passa?
+                Qualidade
               </span>
             </h1>
 
@@ -144,7 +144,7 @@ export default function Home() {
         <div className="container relative z-10">
           <div className="max-w-xl space-y-6">
             <div className="inline-block px-4 py-2 rounded-full bg-black/40 backdrop-blur-md border border-white/10 mb-4">
-              <span className="text-primary font-bold">Roberto, 68 anos</span> <span className="text-white/80">- Cambé</span>
+              <span className="text-primary font-bold">Roberto, 68 anos</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
               "Voltei a brincar com meus netos sem medo da dor."
@@ -214,7 +214,7 @@ export default function Home() {
         <div className="container relative z-10 text-right">
           <div className="max-w-xl ml-auto space-y-6">
             <div className="inline-block px-4 py-2 rounded-full bg-black/40 backdrop-blur-md border border-white/10 mb-4">
-              <span className="text-primary font-bold">Ana Paula, 42 anos</span> <span className="text-white/80">- Arapongas</span>
+              <span className="text-primary font-bold">Ana Paula, 42 anos</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
               "O movimento é a chave para a liberdade."
@@ -341,7 +341,7 @@ export default function Home() {
         <div className="container relative z-10">
           <div className="max-w-xl space-y-6">
             <div className="inline-block px-4 py-2 rounded-full bg-black/40 backdrop-blur-md border border-white/10 mb-4">
-              <span className="text-primary font-bold">Mariana, 35 anos</span> <span className="text-white/80">- Cambé</span>
+              <span className="text-primary font-bold">Mariana, 35 anos</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
               "Dormir bem não é mais um sonho distante."
@@ -405,7 +405,7 @@ export default function Home() {
               O Que Nossos Pacientes <span className="text-primary">Dizem</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Histórias reais de quem recuperou a qualidade de vida em nossas clínicas de Cambé e Arapongas.
+              Histórias reais de quem recuperou a qualidade de vida em nossas clínicas.
             </p>
           </div>
 
@@ -476,8 +476,8 @@ export default function Home() {
                   <div>
                     <p className="font-bold text-white text-sm">{review.name}</p>
                     <div className="flex items-center gap-1 text-xs text-primary">
-                      <MapPin className="w-3 h-3" />
-                      {review.unit}
+                      {review.unit && <MapPin className="w-3 h-3" />}
+                      {"Unidade Particular"}
                     </div>
                   </div>
                 </div>
@@ -506,7 +506,7 @@ export default function Home() {
               Visite Nossas Clínicas
             </h2>
             <p className="text-muted-foreground text-lg">
-              Estamos convenientemente localizados em Cambé e Arapongas para melhor atendê-lo.
+              Estamos convenientemente localizados para melhor atendê-lo.
             </p>
           </div>
 
@@ -518,7 +518,7 @@ export default function Home() {
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white">Unidade Cambé</h3>
+                  <h3 className="text-2xl font-bold text-white">Nossa Unidade</h3>
                   <p className="text-muted-foreground text-lg">Rua Espanha, 58 – Sala 4 - Centro</p>
                   <p className="text-sm text-slate-500 mt-1">Segunda a Sexta: 08h às 19h</p>
                 </div>
@@ -532,13 +532,13 @@ export default function Home() {
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
-                  title="Mapa Unidade Cambé"
+                  title="Mapa da Unidade"
                   className="grayscale hover:grayscale-0 transition-all duration-500"
                 ></iframe>
               </div>
 
               <Button onClick={openTypebot} className="w-full" variant="outline">
-                Agendar em Cambé
+                Agendar Avaliação
               </Button>
             </div>
 
@@ -549,7 +549,7 @@ export default function Home() {
                   <MapPin className="w-6 h-6 text-cyan-500" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white">Unidade Arapongas</h3>
+                  <h3 className="text-2xl font-bold text-white">Nossa Unidade</h3>
                   <p className="text-muted-foreground text-lg">Rua Drongo, 735 - Centro</p>
                   <p className="text-sm text-slate-500 mt-1">Segunda a Sexta: 08h às 19h</p>
                 </div>
@@ -563,13 +563,13 @@ export default function Home() {
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
-                  title="Mapa Unidade Arapongas"
+                  title="Mapa da Unidade"
                   className="grayscale hover:grayscale-0 transition-all duration-500"
                 ></iframe>
               </div>
 
               <Button onClick={openTypebot} className="w-full" variant="outline">
-                Agendar em Arapongas
+                Agendar Avaliação
               </Button>
             </div>
           </div>
@@ -584,11 +584,11 @@ export default function Home() {
               <div className="flex items-center gap-2">
                 <Activity className="text-primary w-6 h-6" />
                 <span className="text-xl font-bold text-white">
-                  Fisioterapia<span className="text-primary">Especializada</span>
+                  Fisio de <span className="text-primary">Qualidade</span>
                 </span>
               </div>
               <p className="text-muted-foreground max-w-xs">
-                Transformando vidas através do movimento sem dor. Tratamento especializado em Cambé e Arapongas.
+                Transformando vidas através do movimento sem dor. Tratamento especializado.
               </p>
             </div>
 
