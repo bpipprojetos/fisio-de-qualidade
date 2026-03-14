@@ -19,11 +19,14 @@ const buttonVariants = cva(
         ghost:
           "hover:bg-accent dark:hover:bg-accent/50",
         link: "text-primary underline-offset-4 hover:underline",
+        cta: "bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-lg hover:shadow-xl hover:scale-[1.02] text-lg",
+        whatsapp: "bg-[hsl(142,70%,45%)] text-[hsl(0,0%,100%)] hover:bg-[hsl(142,70%,40%)] shadow-lg hover:shadow-xl hover:scale-[1.02] text-lg",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
         sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
         lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
+        xl: "h-14 rounded-xl px-10 text-lg",
         icon: "size-9",
         "icon-sm": "size-8",
         "icon-lg": "size-10",

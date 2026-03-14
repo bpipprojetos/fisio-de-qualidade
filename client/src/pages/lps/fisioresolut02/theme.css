@@ -1,0 +1,69 @@
+.theme-fisioresolut02 {
+  --primary: #f97316; /* orange-500 */
+  --primary-foreground: #ffffff;
+  --background: #020617; /* slate-950 */
+  --foreground: #f8fafc; /* slate-50 */
+  
+  --secondary: #0f172a; /* slate-900 */
+  --secondary-foreground: #f8fafc;
+  
+  --muted: #1e293b; /* slate-800 */
+  --muted-foreground: #94a3b8; /* slate-400 */
+  
+  --accent: #f97316;
+  --accent-foreground: #ffffff;
+  
+  --border: #1e293b;
+  --input: #1e293b;
+  --ring: #f97316;
+
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom animations for this LP */
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(-5%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s infinite;
+}
+
+.theme-fisioresolut02 .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+    .theme-fisioresolut02 .container {
+        max-width: 640px;
+    }
+}
+
+@media (min-width: 768px) {
+    .theme-fisioresolut02 .container {
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .theme-fisioresolut02 .container {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .theme-fisioresolut02 .container {
+        max-width: 1200px;
+    }
+}

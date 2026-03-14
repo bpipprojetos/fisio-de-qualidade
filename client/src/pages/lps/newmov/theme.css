@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+
+/* Configuração de Variáveis NewMov */
+.theme-newmov {
+  /* Cores Base - Forçadas para Tema Claro */
+  --background: #ffffff;
+  --foreground: #1a2b33;
+  --card: #ffffff;
+  --card-foreground: #1a2b33;
+  --popover: #ffffff;
+  --popover-foreground: #1a2b33;
+  --primary: #2d8a5b;
+  --primary-foreground: #ffffff;
+  --secondary: #f39233;
+  --secondary-foreground: #ffffff;
+  --muted: #f8f3ed;
+  --muted-foreground: #666666;
+  --accent: #ebf7ee;
+  --accent-foreground: #1a2b33;
+  --border: #e0e0e0;
+  --input: #e0e0e0;
+  --ring: #2d8a5b;
+  
+  --warm-bg: #F8F3ED;
+  --accent-bg: #EBF7EE;
+  
+  --font-heading: 'Merriweather', Georgia, serif;
+  --font-body: 'Source Sans 3', -apple-system, sans-serif;
+}
+
+/* Bloqueio de Modo Escuro Global */
+.dark .theme-newmov, .theme-newmov.dark {
+  --background: #ffffff !important;
+  --foreground: #1a2b33 !important;
+  --card: #ffffff !important;
+  --card-foreground: #1a2b33 !important;
+  --muted: #f8f3ed !important;
+  --muted-foreground: #666666 !important;
+  --border: #e0e0e0 !important;
+  --primary-foreground: #ffffff !important;
+}
+
+/* Base Styles */
+.theme-newmov {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+}
+
+/* Typography - Permitir que o Tailwind controle a cor */
+.theme-newmov h1, 
+.theme-newmov h2, 
+.theme-newmov h3, 
+.theme-newmov h4, 
+.theme-newmov h5, 
+.theme-newmov h6 {
+  font-family: var(--font-heading) !important;
+}
+
+/* Utilitários de Background Forçados */
+.theme-newmov .bg-warm-newmov { background-color: #F8F3ED !important; }
+.theme-newmov .bg-accent-newmov { background-color: #EBF7EE !important; }
+.theme-newmov .bg-background { background-color: var(--background) !important; }
+.theme-newmov .bg-card { background-color: var(--card) !important; }
+
+/* Correção de Header */
+.theme-newmov header {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+/* Garantir que textos muted apareçam corretamente */
+.theme-newmov .text-muted-foreground {
+  color: #666666 !important;
+}
+
+/* Permitir que cores customizadas do Tailwind funcionem (Removendo bloqueios excessivos) */
+.theme-newmov .text-primary-foreground { color: #ffffff !important; }
+.theme-newmov .text-secondary { color: #f39233 !important; }
+.theme-newmov .text-primary { color: #2d8a5b !important; }
+.theme-newmov .bg-foreground { background-color: #1a2b33 !important; }
