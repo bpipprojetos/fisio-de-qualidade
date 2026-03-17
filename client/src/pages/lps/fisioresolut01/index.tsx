@@ -376,9 +376,13 @@ const Index = () => {
             <a href="/politica-privacidade" className="text-sm text-primary-foreground/70 hover:text-secondary transition-colors">Política de Privacidade</a>
             <a href="/termos-uso" className="text-sm text-primary-foreground/70 hover:text-secondary transition-colors">Termos de Uso</a>
           </div>
-          <p className="text-sm text-primary-foreground/50">
+          <p className="text-sm text-primary-foreground/50 mb-4">
             © {new Date().getFullYear()} FisioResolut - Instituto Trata. Todos os direitos reservados.
           </p>
+          <div className="text-[10px] md:text-xs text-primary-foreground/30 flex flex-col md:flex-row justify-center gap-2 md:gap-4 border-t border-white/5 pt-4">
+            <span>RAZÂO SOCIAL: OJOELHO FISIOTERAPIA ESPECIALIZADA LTDA</span>
+            <span>CNPJ: 20.308.866/0001-71</span>
+          </div>
         </div>
       </footer>
     </div>

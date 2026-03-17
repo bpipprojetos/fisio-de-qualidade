@@ -612,8 +612,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="pt-8 border-t border-border/30 text-center text-sm text-slate-600">
+          <div className="pt-8 border-t border-border/30 text-center text-sm text-slate-600 flex flex-col gap-4">
             <p>&copy; {new Date().getFullYear()} Fisio de Qualidade - Tratamento Especializado. Todos os direitos reservados.</p>
+            <div className="text-xs text-slate-700 flex flex-col md:flex-row justify-center gap-2 md:gap-4 border-t border-border/10 pt-4">
+              <span>RAZÂO SOCIAL: OJOELHO FISIOTERAPIA ESPECIALIZADA LTDA</span>
+              <span>CNPJ: 20.308.866/0001-71</span>
+            </div>
           </div>
         </div>
       </footer>

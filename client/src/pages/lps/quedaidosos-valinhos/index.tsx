@@ -422,15 +422,21 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-            <div className="pt-8 border-t border-slate-900 text-center text-sm">
+            <div className="pt-8 border-t border-slate-900 text-center text-sm flex flex-col gap-6">
               <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                 <p>&copy; {new Date().getFullYear()} Let's Fisioterapia / ITC Vertebral Valinhos. Todos os direitos reservados.</p>
-                <Link href="/politica-privacidade" className="text-slate-500 hover:text-green-500 transition-colors">
-                  Política de Privacidade
-                </Link>
-                <Link href="/termos-uso" className="text-slate-500 hover:text-green-500 transition-colors">
-                  Termos de Uso
-                </Link>
+                <div className="flex gap-4">
+                  <Link href="/politica-privacidade" className="text-slate-500 hover:text-green-500 transition-colors">
+                    Política de Privacidade
+                  </Link>
+                  <Link href="/termos-uso" className="text-slate-500 hover:text-green-500 transition-colors">
+                    Termos de Uso
+                  </Link>
+                </div>
+              </div>
+              <div className="text-[10px] md:text-xs text-slate-500/40 flex flex-col md:flex-row justify-center gap-2 md:gap-4 border-t border-slate-900/50 pt-4">
+                <span>RAZÂO SOCIAL: OJOELHO FISIOTERAPIA ESPECIALIZADA LTDA</span>
+                <span>CNPJ: 20.308.866/0001-71</span>
               </div>
             </div>
           </div>

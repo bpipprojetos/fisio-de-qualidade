@@ -601,8 +601,12 @@ export default function Home() {
               <p className="text-sm text-orange-500 font-bold">Vila Leopoldina - SP</p>
             </div>
           </div>
-          <div className="border-t border-slate-800 pt-8 text-center text-xs opacity-50">
+          <div className="border-t border-slate-800 pt-8 text-center text-xs opacity-50 flex flex-col gap-4">
             <p>&copy; {new Date().getFullYear()} Fisioresolut / Instituto Trata. Todos os direitos reservados.</p>
+            <div className="flex flex-col md:flex-row justify-center gap-2 md:gap-4 border-t border-slate-800/50 pt-4">
+              <span>RAZÂO SOCIAL: OJOELHO FISIOTERAPIA ESPECIALIZADA LTDA</span>
+              <span>CNPJ: 20.308.866/0001-71</span>
+            </div>
           </div>
         </div>
       </footer>

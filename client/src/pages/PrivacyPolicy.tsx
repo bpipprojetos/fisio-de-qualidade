@@ -79,8 +79,12 @@ export default function PrivacyPolicy() {
       </main>
 
       <footer className="bg-black py-8 border-t border-gray-800 mt-12">
-        <div className="container mx-auto px-4 text-center text-gray-500 text-sm">
+        <div className="container mx-auto px-4 text-center text-gray-500 text-sm flex flex-col gap-4">
           <p>&copy; {new Date().getFullYear()} Fisioterapia Especializada - Cambé e Arapongas. Todos os direitos reservados.</p>
+          <div className="text-[10px] md:text-xs text-gray-600 flex flex-col md:flex-row justify-center gap-2 md:gap-4 border-t border-gray-800/50 pt-4">
+            <span>RAZÂO SOCIAL: OJOELHO FISIOTERAPIA ESPECIALIZADA LTDA</span>
+            <span>CNPJ: 20.308.866/0001-71</span>
+          </div>
         </div>
       </footer>
     </div>

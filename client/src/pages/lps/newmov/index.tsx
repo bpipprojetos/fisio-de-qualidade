@@ -362,17 +362,23 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="bg-foreground border-t border-white/10 py-8">
-        <div className="container mx-auto px-4 flex flex-col items-center gap-4 text-center">
-          <p className="text-sm text-white/50">
-            © {new Date().getFullYear()} NewMov Saúde Integrada. Todos os direitos reservados.
-          </p>
-          <div className="flex gap-4 text-sm text-white/50">
-            <Link href="/politica-privacidade" className="hover:text-white transition-colors">
-              Política de Privacidade
-            </Link>
-            <Link href="/termos-uso" className="hover:text-white transition-colors">
-              Termos de Uso
-            </Link>
+        <div className="container mx-auto px-4 flex flex-col items-center gap-6 text-center">
+          <div className="flex flex-col md:flex-row items-center gap-4">
+            <p className="text-sm text-white/50">
+              © {new Date().getFullYear()} NewMov Saúde Integrada. Todos os direitos reservados.
+            </p>
+            <div className="flex gap-4 text-sm text-white/50">
+              <Link href="/politica-privacidade" className="hover:text-white transition-colors">
+                Política de Privacidade
+              </Link>
+              <Link href="/termos-uso" className="hover:text-white transition-colors">
+                Termos de Uso
+              </Link>
+            </div>
+          </div>
+          <div className="text-[10px] md:text-xs text-white/20 flex flex-col md:flex-row justify-center gap-2 md:gap-4 border-t border-white/5 pt-4 w-full">
+            <span>RAZÂO SOCIAL: OJOELHO FISIOTERAPIA ESPECIALIZADA LTDA</span>
+            <span>CNPJ: 20.308.866/0001-71</span>
           </div>
         </div>
       </footer>

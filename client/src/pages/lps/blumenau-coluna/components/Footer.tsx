@@ -16,11 +16,17 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <div className="text-center text-sm text-muted-foreground border-t border-border pt-6 flex flex-col md:flex-row justify-center gap-4">
-        <span>ITC Vertebral Blumenau | Todos direitos reservados.</span>
-        <div className="flex gap-4">
-          <a href="/politica-privacidade" className="hover:underline">Política de Privacidade</a>
-          <a href="/termos-uso" className="hover:underline">Termos de Uso</a>
+      <div className="text-center text-sm text-muted-foreground border-t border-border pt-6 flex flex-col gap-4">
+        <div className="flex flex-col md:flex-row justify-center gap-4">
+          <span>ITC Vertebral Blumenau | Todos direitos reservados.</span>
+          <div className="flex gap-4 items-center justify-center">
+            <a href="/politica-privacidade" className="hover:underline">Política de Privacidade</a>
+            <a href="/termos-uso" className="hover:underline">Termos de Uso</a>
+          </div>
+        </div>
+        <div className="text-xs text-muted-foreground/60 flex flex-col md:flex-row justify-center gap-2 md:gap-4">
+          <span>RAZÂO SOCIAL: OJOELHO FISIOTERAPIA ESPECIALIZADA LTDA</span>
+          <span>CNPJ: 20.308.866/0001-71</span>
         </div>
       </div>
     </footer>

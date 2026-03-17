@@ -51,15 +51,21 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Instituto TRATA João Pessoa. Todos os direitos reservados.</p>
-          <div className="flex gap-4">
-            <Link href="/politica-privacidade">
-              <a className="hover:text-primary transition-colors">Política de Privacidade</a>
-            </Link>
-            <Link href="/termos-uso">
-              <a className="hover:text-primary transition-colors">Termos de Uso</a>
-            </Link>
+        <div className="border-t border-gray-100 pt-8 flex flex-col items-center gap-6 text-sm text-gray-400">
+          <div className="flex flex-col md:flex-row justify-between items-center w-full gap-4">
+            <p>&copy; {new Date().getFullYear()} Instituto TRATA João Pessoa. Todos os direitos reservados.</p>
+            <div className="flex gap-4">
+              <Link href="/politica-privacidade">
+                <a className="hover:text-primary transition-colors">Política de Privacidade</a>
+              </Link>
+              <Link href="/termos-uso">
+                <a className="hover:text-primary transition-colors">Termos de Uso</a>
+              </Link>
+            </div>
+          </div>
+          <div className="text-xs text-gray-400/60 flex flex-col md:flex-row justify-center gap-2 md:gap-4 border-t border-gray-50 pt-4 w-full">
+            <span>RAZÂO SOCIAL: OJOELHO FISIOTERAPIA ESPECIALIZADA LTDA</span>
+            <span>CNPJ: 20.308.866/0001-71</span>
           </div>
         </div>
       </div>

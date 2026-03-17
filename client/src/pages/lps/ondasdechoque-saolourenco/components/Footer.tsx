@@ -83,12 +83,21 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
-          <div className="flex flex-col md:flex-row items-center gap-4">
+        <div className="border-t border-white/10 pt-8 flex flex-col items-center gap-6 text-xs text-white/40">
+          <div className="flex flex-col md:flex-row justify-between items-center w-full gap-4 text-center md:text-left">
             <p>© 2026 ITC Vertebral & Instituto TRATA São Lourenço. Todos os direitos reservados.</p>
-            <a href="/politica-privacidade" className="hover:text-white transition-colors underline">
-              Política de Privacidade
-            </a>
+            <div className="flex gap-4">
+              <a href="/politica-privacidade" className="hover:text-white transition-colors underline">
+                Política de Privacidade
+              </a>
+              <a href="/termos-uso" className="hover:text-white transition-colors underline">
+                Termos de Uso
+              </a>
+            </div>
+          </div>
+          <div className="text-white/30 flex flex-col md:flex-row justify-center gap-2 md:gap-4 border-t border-white/5 pt-4 w-full text-center">
+            <span>RAZÂO SOCIAL: OJOELHO FISIOTERAPIA ESPECIALIZADA LTDA</span>
+            <span>CNPJ: 20.308.866/0001-71</span>
           </div>
         </div>
       </div>
