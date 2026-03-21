@@ -14,6 +14,8 @@ import BlumenauColunaLP from "./pages/lps/blumenau-coluna";
 import NewmovLP from "./pages/lps/newmov";
 import Fisioresolut01LP from "./pages/lps/fisioresolut01";
 import Fisioresolut02LP from "./pages/lps/fisioresolut02";
+import PhysiovidaManausLP from "./pages/lps/physiovida-manaus";
+
 
 function Router() {
   return (
@@ -27,6 +29,8 @@ function Router() {
       <Route path={"/newmov"} component={NewmovLP} />
       <Route path={"/fisioresolut01"} component={Fisioresolut01LP} />
       <Route path={"/fisioresolut02"} component={Fisioresolut02LP} />
+      <Route path={"/physiovida-manaus"} component={PhysiovidaManausLP} />
+
       <Route path={"/politica-privacidade"} component={PrivacyPolicy} />
       <Route path={"/termos-uso"} component={TermsOfUse} />
       <Route path={"/404"} component={NotFound} />
