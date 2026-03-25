@@ -1,131 +1,131 @@
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { 
-  Activity, 
   ArrowRight, 
-  BrainCircuit, 
   CheckCircle2, 
+  PlayCircle, 
   Clock, 
-  HeartPulse, 
   MapPin, 
-  Microscope, 
-  Move, 
+  Phone, 
   ShieldCheck, 
-  Star, 
-  UserCheck, 
-  Users 
+  Star,
+  Zap,
+  Award,
+  Users,
+  BrainCircuit,
+  HeartPulse,
+  Microscope,
+  UserCheck
 } from "lucide-react";
-import { useEffect, useState } from "react";
-import { Link } from "wouter";
-import "./theme.css";
 
 export default function PhysiovidaManausLP() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   const openTypebot = () => {
-    window.open("https://typebot.co/jonathan-dorcronica", "_blank");
+    window.open("https://wa.me/5592982823611", "_blank");
   };
 
   return (
-    <div className="theme-physiovida-manaus min-h-screen bg-background text-foreground font-sans selection:bg-primary/30 selection:text-primary-foreground overflow-x-hidden">
-      
-      {/* Sticky Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-slate-900 shadow-lg py-3 transition-all duration-300 border-b border-white/10">
-        <div className="container flex items-center justify-between">
-          <div className="flex items-center gap-4">
+    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/30">
+      {/* Navbar overlay */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/5">
+        <div className="container flex items-center justify-between h-20">
+          <div className="flex items-center gap-2">
             <img 
-              src="/assets/images/lps/physiovida-manaus/itc-logo.webp" 
-              alt="Logo ITC Fisioterapia Especializada em Manaus" 
-              className="h-12 object-contain"
-              loading="lazy"
+              src="/assets/images/logo-physiovida.png" 
+              alt="Physiovida Logo" 
+              className="h-10 w-auto"
             />
           </div>
-          
-          <div className="hidden md:block">
-            <span className="text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-full border border-white/10 backdrop-blur-sm">
-              Clínicas com Fisioterapia Especializada em Manaus
-            </span>
-          </div>
+          <Button onClick={openTypebot} className="hidden md:inline-flex bg-primary hover:bg-primary/90 text-white rounded-full px-6">
+            Agendar Consulta
+          </Button>
+          <Button onClick={openTypebot} variant="ghost" size="icon" className="md:hidden text-white">
+            <Phone className="w-6 h-6" />
+          </Button>
         </div>
-      </header>
+      </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-        {/* Background Image with Overlay */}
+      <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
+        {/* Background Visuals */}
         <div className="absolute inset-0 z-0">
           <img 
             src="/assets/images/lps/physiovida-manaus/hero-bg.jpg" 
-            alt="Ambiente de Fisioterapia Especializada de Qualidade" 
-            className="w-full h-full object-cover opacity-70"
+            alt="Clínica de Fisioterapia em Manaus" 
+            className="w-full h-full object-cover opacity-40 mix-blend-overlay"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-background via-background/80 to-transparent" />
         </div>
 
-        <div className="container relative z-10 grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8 animate-in fade-in slide-in-from-bottom-10 duration-1000">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-              </span>
-              Manaus
-            </div>
-            
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white">
-              Dor Crônica <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-400">
-                Que Não Passa?
-              </span>
-            </h1>
-            
-            <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
-              Você já tentou várias fisioterapias e a dor continua? Oferecemos um tratamento diferenciado, baseado em tecnologia e ciência, que já transformou a vida de milhares de pessoas.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button 
-                onClick={openTypebot} 
-                size="lg" 
-                className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-white shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] transition-all"
-              >
-                Qualifique-se Agora
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <div className="flex items-center gap-4 px-4 text-sm text-muted-foreground">
-                <div className="flex -space-x-2">
-                  {[1, 2, 3, 4].map((i) => (
-                    <div key={i} className="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-xs text-white overflow-hidden">
-                      <Users className="w-4 h-4 text-slate-400" />
-                    </div>
-                  ))}
-                </div>
-                <p>+83k Pacientes Tratados</p>
+        <div className="container relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8 animate-in fade-in slide-in-from-left duration-1000">
+              <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
+                <Zap className="w-4 h-4 text-primary" />
+                <span className="text-primary font-bold text-sm tracking-wide uppercase">Fisioterapia de Elite em Manaus</span>
               </div>
+              
+              <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white">
+                Recupere sua <span className="text-primary">liberdade</span> de movimento.
+              </h1>
+              
+              <p className="text-xl text-muted-foreground max-w-xl leading-relaxed">
+                Especialistas em Coluna e Membros Inferiores. Método exclusivo que evita cirurgias e devolve sua qualidade de vida em tempo recorde.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Button 
+                  onClick={openTypebot} 
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90 text-white px-8 py-8 text-xl rounded-full shadow-[0_20px_40px_rgba(var(--primary-rgb),0.3)] hover:shadow-primary/40 transition-all duration-300 transform hover:-translate-y-1"
+                >
+                  Quero Falar com um Especialista
+                  <ArrowRight className="ml-2 w-6 h-6" />
+                </Button>
+                
+                <div className="flex items-center gap-4 px-4 py-2">
+                  <div className="flex -space-x-3">
+                    {[1, 2, 3].map((i) => (
+                      <div key={i} className="w-10 h-10 rounded-full border-2 border-background bg-slate-800" />
+                    ))}
+                  </div>
+                  <div>
+                    <div className="flex items-center">
+                      {[1, 2, 3, 4, 5].map((i) => (
+                        <Star key={i} className="w-3 h-3 text-yellow-400 fill-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-xs text-muted-foreground font-medium">+80.000 vidas transformadas</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="hidden lg:block">
+              {/* Empty space for layout balance as per original design or specific user preference to keep it clean */}
             </div>
           </div>
         </div>
       </section>
-
-      {/* Areas of Expertise Section */}
-      <section className="py-12 bg-slate-900 border-y border-white/5">
+      {/* Specialties and Treatments - Restored Section */}
+      <section className="py-12 bg-slate-950 border-y border-white/5">
         <div className="container">
-          <p className="text-center text-muted-foreground mb-8 text-sm uppercase tracking-widest">Especialidades e Tratamentos</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 text-center">
-            {["Coluna Vertebral", "Joelho", "Quadril", "Ombro", "Pé e Tornozelo", "Dor de Cabeça"].map((area, idx) => (
-              <div key={idx} className="bg-white/5 hover:bg-white/10 transition-colors rounded-lg p-4 border border-white/5 flex flex-col items-center justify-center gap-2 group cursor-default">
-                <div className="w-2 h-2 rounded-full bg-primary group-hover:scale-150 transition-transform" />
-                <span className="font-medium text-white">{area}</span>
+          <div className="text-center mb-10">
+            <span className="text-[10px] font-bold tracking-[0.2em] text-slate-500 uppercase">Especialidades e Tratamentos</span>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {[
+              "Coluna Vertebral",
+              "Joelho",
+              "Quadril",
+              "Ombro",
+              "Pé e Tornozelo",
+              "Dor de Cabeça"
+            ].map((item, idx) => (
+              <div key={idx} className="bg-slate-900/50 border border-white/5 rounded-xl p-6 text-center flex flex-col items-center justify-center gap-3 hover:bg-slate-900 transition-colors group">
+                <div className="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_10px_rgba(var(--primary-rgb),0.8)]" />
+                <span className="text-white font-medium text-sm">{item}</span>
               </div>
             ))}
           </div>
@@ -137,11 +137,11 @@ export default function PhysiovidaManausLP() {
         <div className="absolute inset-0">
           <img 
             src="/assets/images/lps/physiovida-manaus/wellness-1.jpg" 
-            alt="Idoso brincando com neto sem dor após tratamento de fisioterapia" 
+            alt="Pessoa idosa feliz brincando com netos após tratamento" 
             className="w-full h-full object-cover"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
         </div>
         <div className="container relative z-10">
           <div className="max-w-xl space-y-6">
@@ -199,6 +199,17 @@ export default function PhysiovidaManausLP() {
               </Card>
             ))}
           </div>
+
+          <div className="mt-12 text-center">
+            <Button 
+              onClick={openTypebot} 
+              size="lg" 
+              className="bg-[#25D366] hover:bg-[#128C7E] text-white px-10 py-7 text-xl rounded-full shadow-[0_10px_20px_rgba(37,211,102,0.2)] hover:shadow-[0_15px_30px_rgba(37,211,102,0.4)] transition-all duration-300 group"
+            >
+              Quero Agendar Minha Avaliação
+              <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -207,7 +218,7 @@ export default function PhysiovidaManausLP() {
         <div className="absolute inset-0">
           <img 
             src="/assets/images/lps/physiovida-manaus/wellness-2.jpg" 
-            alt="Mulher praticando exercícios físicos com liberdade de movimento" 
+            alt="Mulher praticando exercícios físicos com liberdade de movemento" 
             className="w-full h-full object-cover"
             loading="lazy"
           />
@@ -676,7 +687,7 @@ export default function PhysiovidaManausLP() {
       </section>
 
       {/* Differentials Section */}
-      <section className="py-24 bg-white text-slate-900 border-t border-slate-100">
+      <section className="py-24 bg-white text-slate-900 border-t border-slate-100 font-sans">
         <div className="container">
           <div className="text-center mb-16">
             <span className="text-sm font-bold tracking-wider text-primary uppercase mb-2 block">DIFERENCIAIS</span>
@@ -690,16 +701,17 @@ export default function PhysiovidaManausLP() {
 
           <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-100 max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2">
-              {/* Trata Manaus */}
+              {/* Physiovida Manaus */}
               <div className="p-8 md:p-12 bg-slate-50">
                 <div className="flex items-center gap-3 mb-8">
                   <img 
-                    src="/assets/images/lps/physiovida-manaus/itc-logo-footer.webp" 
-                    alt="ITC Fisioterapia Especializada Logo Rodapé" 
-                    className="h-10 object-contain"
+                    src="/assets/images/logo-physiovida.png" 
+                    alt="Physiovida Logo" 
+                    className="h-10 object-contain brightness-0"
                     loading="lazy"
                   />
                 </div>
+
                 <ul className="space-y-6">
                   {[
                     "Especialistas em Membros Inferiores e Coluna",
@@ -741,6 +753,17 @@ export default function PhysiovidaManausLP() {
                 </ul>
               </div>
             </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Button 
+              onClick={openTypebot} 
+              size="lg" 
+              className="bg-[#25D366] hover:bg-[#128C7E] text-white px-10 py-7 text-xl rounded-full shadow-[0_10px_20px_rgba(37,211,102,0.2)] hover:shadow-[0_15px_30px_rgba(37,211,102,0.4)] transition-all duration-300 group"
+            >
+              Quero Agendar Minha Avaliação
+              <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
+            </Button>
           </div>
         </div>
       </section>
@@ -786,7 +809,7 @@ export default function PhysiovidaManausLP() {
                 size="lg" 
                 className="bg-[#103025] hover:bg-[#1a4a3a] text-white px-8 py-6 text-lg rounded-full shadow-lg transition-all duration-300"
               >
-                QUERO VIVER SEM DOR
+                QUERO RECUPERAR MINHA QUALIDADE DE VIDA
               </Button>
             </div>
 
@@ -880,6 +903,17 @@ export default function PhysiovidaManausLP() {
               </div>
             ))}
           </div>
+
+          <div className="mt-12 text-center">
+            <Button 
+              onClick={openTypebot} 
+              size="lg" 
+              className="bg-[#25D366] hover:bg-[#128C7E] text-white px-10 py-7 text-xl rounded-full shadow-[0_10px_20px_rgba(37,211,102,0.2)] hover:shadow-[0_15px_30px_rgba(37,211,102,0.4)] transition-all duration-300 group"
+            >
+              Quero Agendar Minha Avaliação
+              <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -908,46 +942,45 @@ export default function PhysiovidaManausLP() {
                   <p className="text-sm text-slate-500 mt-1">Segunda a Sexta: 08h às 19h</p>
                 </div>
               </div>
-              
-              <div className="h-[350px] bg-slate-800 rounded-2xl overflow-hidden relative border border-white/10 shadow-2xl">
+
+              <div className="rounded-2xl overflow-hidden border border-white/10 shadow-lg h-[400px]">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.034263827036!2d-60.0235!3d-3.1075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c102c7c7c7c7c%3A0x0!2sTravessa%20Baltazar%2C%20Rua%20B%20Sete%2C%2063%20-%20Adrian%C3%B3polis%2C%20Manaus%20-%20AM%2C%2069057-081!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" 
-                  width="100%" 
-                  height="100%" 
-                  style={{ border: 0 }} 
-                  allowFullScreen 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1469.34!2d-60.010!3d-3.116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c100!2sAdrian%C3%B3polis!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr" 
+                  className="w-full h-full border-0 grayscale invert opacity-80"
+                  allowFullScreen
                   loading="lazy"
-                  title="Mapa Unitade Manaus"
-                  className="grayscale hover:grayscale-0 transition-all duration-500"
+                  referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
               </div>
-              
-              <Button onClick={openTypebot} className="w-full" variant="outline">
-                Agendar em Manaus
-              </Button>
             </div>
 
-            {/* Video Tour */}
-            <div className="flex flex-col items-center justify-center h-full space-y-6 bg-slate-900/50 p-8 rounded-3xl border border-white/5">
-              <div className="text-center space-y-4">
-                <div className="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center mx-auto shadow-lg">
-                  <Activity className="text-primary w-8 h-8" />
+            <div className="bg-card/50 backdrop-blur-sm p-8 rounded-3xl border border-white/10">
+              <h3 className="text-2xl font-bold text-white mb-6">Pronto para começar?</h3>
+              <p className="text-muted-foreground mb-8">
+                Agende sua avaliação agora mesmo e dê o primeiro passo para uma vida sem limitações.
+              </p>
+              
+              <div className="space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center">
+                    <Phone className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-muted-foreground">WhatsApp</p>
+                    <p className="text-white font-bold">(92) 98282-3611</p>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-white">Conheça Nossa Clínica</h3>
-                <p className="text-muted-foreground">
-                  Faça um tour virtual pelo nosso espaço e veja onde sua recuperação vai acontecer.
-                </p>
-              </div>
-
-              <div className="relative w-full max-w-sm aspect-[9/16] rounded-2xl overflow-hidden border-4 border-white/10 shadow-2xl bg-black">
-                <video 
-                  src="/assets/images/lps/physiovida-manaus/tour-video.mp4" 
-                  className="w-full h-full object-cover"
-                  controls
-                  playsInline
+                
+                <Button 
+                  onClick={openTypebot} 
+                  className="w-full bg-primary hover:bg-primary/90 text-white py-8 text-xl rounded-2xl shadow-lg"
                 >
-                  Seu navegador não suporta o elemento de vídeo.
-                </video>
+                  Agendar Agora
+                </Button>
+                
+                <p className="text-center text-xs text-muted-foreground pt-4">
+                  * Respondemos em média em menos de 5 minutos.
+                </p>
               </div>
             </div>
           </div>
@@ -955,42 +988,29 @@ export default function PhysiovidaManausLP() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-border/30 bg-background">
+      <footer className="py-12 bg-background border-t border-white/5">
         <div className="container">
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
-            <div className="col-span-2 space-y-4">
-              <div className="flex items-center gap-2">
-                <Activity className="text-primary w-6 h-6" />
-                <span className="text-xl font-bold text-white">
-                  Fisioterapia<span className="text-primary">Especializada</span>
-                </span>
-              </div>
-              <p className="text-muted-foreground max-w-xs">
-                Transformando vidas através do movimento sem dor. Tratamento especializado em Manaus.
-              </p>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+            <div className="flex items-center gap-2">
+              <img 
+                src="/assets/images/logo-physiovida.png" 
+                alt="Physiovida Logo" 
+                className="h-8 w-auto opacity-70"
+              />
             </div>
             
-            <div>
-              <h4 className="font-bold text-white mb-4">Tratamentos</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>Coluna Vertebral</li>
-                <li>Joelho e Quadril</li>
-                <li>Ombro e Cotovelo</li>
-                <li>Dor Crônica</li>
-              </ul>
+            <div className="flex gap-8 text-sm text-muted-foreground">
+              <a href="/politica-privacidade" className="hover:text-primary transition-colors">Política de Privacidade</a>
+              <a href="/termos-uso" className="hover:text-primary transition-colors">Termos de Uso</a>
             </div>
             
-            <div>
-              <h4 className="font-bold text-white mb-4">Legal</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><Link href="/politica-privacidade" className="hover:text-primary transition-colors">Política de Privacidade</Link></li>
-                <li><Link href="/termos-uso" className="hover:text-primary transition-colors">Termos de Uso</Link></li>
-              </ul>
+            <div className="text-xs text-slate-500">
+              © 2024 Physiovida Manaus. Todos os direitos reservados.
             </div>
           </div>
-          
-          <div className="pt-8 border-t border-border/30 text-center text-sm text-slate-600">
-            <p>&copy; 2026 Fisioterapia Especializada Manaus. Todos os direitos reservados.</p>
+          <div className="text-center mt-8 text-[10px] text-slate-600">
+            Bruno Parente Tecnologia em Saúde LTDA - CNPJ: 45.195.127/0001-44<br />
+            RESPONSÁVEL TÉCNICO: Dr. Raphael (CREFITO: XXXX)
           </div>
         </div>
       </footer>
