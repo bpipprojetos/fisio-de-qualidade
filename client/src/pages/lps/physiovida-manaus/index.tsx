@@ -21,7 +21,7 @@ import {
 
 export default function PhysiovidaManausLP() {
   const openTypebot = () => {
-    window.open("https://wa.me/5592982823611", "_blank");
+    window.open("https://typebot.co/bpip-raphael-manaus-dor-cronica", "_blank");
   };
 
   return (
