@@ -945,7 +945,7 @@ export default function PhysiovidaManausLP() {
 
               <div className="rounded-2xl overflow-hidden border border-white/10 shadow-lg h-[400px]">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1469.34!2d-60.010!3d-3.116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c100!2sAdrian%C3%B3polis!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.0118332411107!2d-60.00868690321043!3d-3.0915087999999904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c1ba941f6dbb3%3A0x5fa537f651e4b92d!2sPhysio%20Vida%20-%20Cl%C3%ADnica%20de%20Fisioterapia%20em%20Manaus!5e0!3m2!1spt-BR!2sbr!4v1776130059402!5m2!1spt-BR!2sbr" 
                   className="w-full h-full border-0 grayscale invert opacity-80"
                   allowFullScreen
                   loading="lazy"
@@ -967,7 +967,7 @@ export default function PhysiovidaManausLP() {
                   </div>
                   <div>
                     <p className="text-xs text-muted-foreground">WhatsApp</p>
-                    <p className="text-white font-bold">(92) 98282-3611</p>
+                    <p className="text-white font-bold">(92) 98123-5894</p>
                   </div>
                 </div>
                 
