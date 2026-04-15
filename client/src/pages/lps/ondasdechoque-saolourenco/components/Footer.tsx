@@ -37,7 +37,7 @@ export default function Footer() {
                 <div>
                   <p className="font-medium text-white text-sm">Endereço</p>
                   <p className="text-white/70 text-sm">
-                    R. Dr. Melo Viana, 269, Centro<br />
+                    R. Dr. Melo Viana, 275, Centro<br />
                     São Lourenço – MG, 37470-000
                   </p>
                 </div>
