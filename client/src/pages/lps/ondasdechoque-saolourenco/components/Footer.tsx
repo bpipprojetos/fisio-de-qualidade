@@ -46,7 +46,7 @@ export default function Footer() {
               <div className="pt-4">
                 <Button
                   className="w-full bg-white hover:bg-gray-100 text-[#14463e] font-bold uppercase text-xs tracking-wider"
-                  onClick={() => window.open("https://typebot.co/bpip-ludmila-toc", "_blank", "noopener,noreferrer")}
+                  onClick={() => window.open("https://tintim.link/whatsapp/5775a6a7-73c3-4465-8f93-24c0cd9991ba/c1c1a1ae-339e-4e0a-8489-c7238a82d152", "_blank", "noopener,noreferrer")}
                 >
                   <Calendar className="mr-2 w-4 h-4" />
                   Agendar Visita

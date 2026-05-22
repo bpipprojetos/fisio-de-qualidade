@@ -54,7 +54,7 @@ export default function Benefits() {
             <div className="pt-4">
               <button
                 className="bg-[#14463e] text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider w-full sm:w-auto hover:bg-[#1f5c52] transition-colors shadow-lg"
-                onClick={() => window.open("https://wa.me/5535991910211", "_blank", "noopener,noreferrer")}
+                onClick={() => window.open("https://tintim.link/whatsapp/5775a6a7-73c3-4465-8f93-24c0cd9991ba/c1c1a1ae-339e-4e0a-8489-c7238a82d152", "_blank", "noopener,noreferrer")}
               >
                 QUERO VIVER SEM DOR
               </button>

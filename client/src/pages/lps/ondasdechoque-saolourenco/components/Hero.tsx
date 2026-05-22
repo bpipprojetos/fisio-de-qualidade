@@ -25,7 +25,7 @@ export default function Hero() {
             <Button 
               size="lg" 
               className="bg-[#14463e] hover:bg-[#1f5c52] text-white rounded-full px-8 py-6 text-sm font-bold uppercase tracking-wider shadow-lg hover:shadow-xl transition-all w-full sm:w-auto"
-              onClick={() => window.open("https://typebot.co/bpip-ludmila-toc", "_blank", "noopener,noreferrer")}
+              onClick={() => window.open("https://tintim.link/whatsapp/5775a6a7-73c3-4465-8f93-24c0cd9991ba/c1c1a1ae-339e-4e0a-8489-c7238a82d152", "_blank", "noopener,noreferrer")}
             >
               AGENDE SUA AVALIAÇÃO
               <ArrowRight className="ml-2 w-4 h-4" />

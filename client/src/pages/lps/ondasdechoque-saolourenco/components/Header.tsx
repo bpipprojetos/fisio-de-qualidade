@@ -90,7 +90,7 @@ export default function Header() {
             <Button
               className="w-full bg-white text-[#14463e] rounded-full mt-2 font-bold uppercase"
               onClick={() => {
-                window.open("https://typebot.co/bpip-ludmila-toc", "_blank", "noopener,noreferrer");
+                window.open("https://tintim.link/whatsapp/5775a6a7-73c3-4465-8f93-24c0cd9991ba/c1c1a1ae-339e-4e0a-8489-c7238a82d152", "_blank", "noopener,noreferrer");
                 setIsMenuOpen(false);
               }}
             >

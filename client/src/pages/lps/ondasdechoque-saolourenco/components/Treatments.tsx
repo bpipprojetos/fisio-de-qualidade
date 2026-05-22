@@ -71,7 +71,7 @@ export default function Treatments() {
               <div className="mt-8">
                 <button 
                   className="text-[#14463e] font-bold text-sm uppercase tracking-wider hover:text-[#1f5c52] transition-colors flex items-center gap-2 group"
-                  onClick={() => window.open("https://typebot.co/bpip-ludmila-toc", "_blank", "noopener,noreferrer")}
+                  onClick={() => window.open("https://tintim.link/whatsapp/5775a6a7-73c3-4465-8f93-24c0cd9991ba/c1c1a1ae-339e-4e0a-8489-c7238a82d152", "_blank", "noopener,noreferrer")}
                 >
                   Agendar Avaliação
                   <span className="transform group-hover:translate-x-1 transition-transform">→</span>

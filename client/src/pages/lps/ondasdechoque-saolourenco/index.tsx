@@ -23,6 +23,35 @@ export default function Home() {
       </main>
 
       <Footer />
+
+      {/* Floating WhatsApp Button */}
+      <a
+        href="https://tintim.link/whatsapp/5775a6a7-73c3-4465-8f93-24c0cd9991ba/c1c1a1ae-339e-4e0a-8489-c7238a82d152"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          position: "fixed",
+          bottom: "20px",
+          right: "20px",
+          zIndex: 9999,
+          background: "#25D366",
+          borderRadius: "50%",
+          width: "60px",
+          height: "60px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
+          textDecoration: "none",
+        }}
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+          width="34"
+          height="34"
+          alt="WhatsApp"
+        />
+      </a>
     </div>
   );
 }
